@@ -1,5 +1,3 @@
----
-
 # Elections Scraper
 
 ## Popis
@@ -19,14 +17,15 @@ URL by malo odkazovať na konkrétny región (napríklad Brno-město), a skript 
     ```
 
     Na MacOS/Linux:
+    ```sh
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-3. **Inštalácia požadovaných knižníc**:
-
-   pip install -r requirements.txt
-   ```
+2. **Inštalácia požadovaných knižníc**:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 ## Spustenie
 
@@ -37,20 +36,24 @@ Na spustenie programu sú potrebné dva argumenty:
 ### Príklad na spustenie pre jedno miesto:
 
 Na Windows (PowerShell):
+```sh
 python main.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=6202" "brno"
 ```
 
 Na MacOS/Linux (Bash):
+```sh
 python3 main.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=6202" "brno"
 ```
 
 ### Príklad na spustenie pre viacero miest naraz (Brno a Praha):
 
 Na Windows (PowerShell):
+```sh
 python main.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=6202" "brno" "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100" "praha"
 ```
 
 Na MacOS/Linux (Bash):
+```sh
 python3 main.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=11&xnumnuts=6202" "brno" "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100" "praha"
 ```
 
@@ -113,9 +116,10 @@ Tu je stručný prehľad toho, čo robí jednotlivá časť kódu:
 ### Detailná kontrola vstupov:
 - Zahŕňa detailnú kontrolu vstupov, aby sa zabezpečilo, že používateľ zadal správny počet argumentov a že argumenty majú platnú URL.
 
-VSTUP A VYSTUP : 
+## Príklad výstupu
+
 PS C:\Users\HAWKp\OneDrive\Desktop\Engeto_Elections_Scraper-master> python main.py  "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2110"  "Praha"
->> 
+```
 2024-05-15 21:27:31,008 - INFO - Spúšťanie kontroly vstupov...
 2024-05-15 21:27:31,009 - INFO - Program beží... Môže to chvíľu trvať...
 Počkajte na potvrdenie.
@@ -124,4 +128,6 @@ Počkajte na potvrdenie.
 2024-05-15 21:28:06,306 - INFO - Program úspešne dokončený.
 Váš výstupný súbor: Praha.csv bol vytvorený
 2024-05-15 21:28:06,307 - INFO - Všetky dáta boli úspešne zozbierané.
+```
 
+---
