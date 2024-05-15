@@ -25,7 +25,7 @@ URL by malo odkazovať na konkrétny región (napríklad Brno-město), a skript 
 2. **Inštalácia požadovaných knižníc**:
 
    pip install -r requirements.txt
-    ```
+   ```
 
 ## Spustenie
 
