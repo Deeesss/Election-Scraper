@@ -13,6 +13,7 @@ URL by malo odkazovať na konkrétny región (napríklad Brno-město), a skript 
 1. **Vytvorte virtuálne prostredie**:
 
     Na Windows:
+    ```sh
     python -m venv venv
     .\venv\Scripts\Activate
     ```
@@ -22,7 +23,7 @@ URL by malo odkazovať na konkrétny región (napríklad Brno-město), a skript 
     source venv/bin/activate
     ```
 
-2. **Inštalácia požadovaných knižníc**:
+3. **Inštalácia požadovaných knižníc**:
 
    pip install -r requirements.txt
    ```
